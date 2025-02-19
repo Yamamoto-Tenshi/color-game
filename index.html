@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Color Sequence Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css" />
+  <script defer src="./js/game.js"></script>
+</head>
+<body> 
+  
+
+<div class="wrapper">
+  <main class="app columns">
+    <section class="game text-color-light">
+      <div class="game__inner flow">
+        <div class="color-buttons"></div>
+        <p class="info-display font-size-2 hidden">Wait</p>
+        <p class="score-display font-size-2">Score: <span class="score-display__number">0</span></p>
+        <button class="button play" data-type="primary">Play</button>
+      </div>
+    </section>
+      
+    <section class="game__description flow">
+      <h1 class="font-size-6">Color Sequence Game</h1>
+      <p class="font-size-3">
+        <strong>Rules: </strong>A Sequence of colors will be created and shown to you. 
+        You have to recreate that Sequence by clicking the colored Buttons. 
+        You start with 1 Color and each time you complete a Sequence, a new Color will be added.
+      </p>
+    </section>
+  </main> 
+</div>
+
+
+</body>
+</html>

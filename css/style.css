@@ -1,0 +1,351 @@
+
+:root {
+  --text-color-light: #fff;
+  --text-color-dark: #000;
+  
+  --font-size-1: 1rem;
+  --font-size-2: 1.25rem;
+  --font-size-3: 1.5rem;
+  --font-size-4: 2rem;
+  --font-size-5: 2.75rem;
+  --font-size-6: 3rem;
+}
+
+@media screen and (max-width: 50rem) {
+  :root {
+    --font-size-2: 1.15rem;
+    --font-size-3: 1.25rem;
+    --font-size-4: 1.75rem;
+    --font-size-5: 2rem;
+    --font-size-6: 2.5rem;
+  }
+  
+}
+
+/* Reset / defaults */
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.4;
+  font-family: "segoe ui", sans-serif;
+  background-image: linear-gradient(to bottom right, #ddddff, #eeeeee);
+  font-size: var(--font-size-default);
+  color: var(--text-color-dark);
+  overflow-x: hidden;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: hsl(220, 70%, 45%);
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+
+
+/* Global  */
+
+
+h1,
+h2,
+h2,
+h3,
+h4 {
+  line-height: 1.1;
+}
+
+
+/* utils */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.columns {
+  display: flex;
+  flex-direction: column;
+}
+
+.columns > * + * {
+  margin-top: 2rem;
+}
+
+@media screen and (min-width: 50em) {
+  .columns {
+    flex-direction: row;
+  }
+
+  .columns--even > *  {
+    flex: 1;
+  }
+  
+  .columns > * + * {
+    margin-left: 4rem;
+    margin-top: 0;
+  }
+}
+
+
+.flow {
+  --flow-space: 0.75em;
+}
+
+.flow > * + * {
+  margin-top: var(--flow-space);
+}
+
+.wrapper {
+  --wrapper-max-width: 69rem;
+  --wrapper-padding: 1.5rem;
+  
+  max-width: var(--wrapper-max-width);
+  padding-right: var(--wrapper-padding);
+  padding-left: var(--wrapper-padding);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.wrapper--narrow {
+  --wrapper-max-width: 55rem;
+}
+
+.wrapper--wide {
+  --wrapper-max-width: 75rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-color-light {
+  color: var(--text-color-light);
+}
+
+.text-color-dark {
+  color: var(--text-color-dark);
+}
+
+.font-size-1 {
+  font-size: var(--font-size-1);
+}
+
+.font-size-2 {
+  font-size: var(--font-size-2);
+}
+
+.font-size-3 {
+  font-size: var(--font-size-3);
+}
+
+.font-size-4 {
+  font-size: var(--font-size-4);
+}
+
+.font-size-5 {
+  font-size: var(--font-size-5);
+}
+
+.font-size-6 {
+  font-size: var(--font-size-6);
+}
+
+
+/* Generic Components */
+
+
+/* Button  */
+
+.button {
+  display: inline-block;
+  padding: 0.25em 3em;
+  border: 2px solid transparent;
+  border-radius: 0.35em;
+  background: var(--button-bg, #e0e0e0);
+  color: var(--button-text, #000);
+  font-size: var(--font-size-2);
+  font-weight: 800;
+  border-radius: 999px;
+  letter-spacing: 2px;
+}
+
+.button[data-type="primary"] {
+  --button-bg: linear-gradient(to bottom, #555599, #9999dd);
+  --button-text: #fff;
+  --border-color: #aaaaee;
+  border-color: var(--border-color);
+}
+
+.button[data-type="primary"]:hover,
+.button[data-type="primary"]:focus {
+  --button-bg: linear-gradient(to bottom, #333344, #777799);
+}
+
+.button-group {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-group > * + * {
+  margin-top: 1rem;
+}
+
+@media screen and (min-width: 50em) {
+  .button-group {
+    flex-direction: row;
+  }
+  
+  .button-group > * + * {
+    margin-top: 0;
+    margin-left: 1rem;
+  }
+}
+
+/* game section */
+
+.app {
+  padding: 2.5rem 0;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: #666;
+}
+
+.game__inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.color-buttons {
+  --button-size: 145px;
+  
+  display: flex;
+  flex-wrap: wrap;
+  width: calc((var(--button-size) * 2) + 1.5rem);
+  gap: 1rem;
+}
+
+.color-button {
+  --button-color: black;
+  
+  width: var(--button-size);
+  height: var(--button-size);
+  border: 0;
+  border-radius: 0.5rem;
+  background-color: var(--button-color);
+  opacity: 0.5;
+  transition:  0.25s ease-in-out;
+}
+
+@media screen and (max-width: 65rem) {
+  .game {
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .game__inner {
+    max-width: 300px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .game__inner > * {
+    align-self: stretch;
+  }
+  
+  .color-buttons {
+    --button-size: 120px;
+    align-self: center;
+  }
+}
+
+.color-button--red {
+  --button-color: red;
+}
+
+.color-button--blue {
+  --button-color: hsl(215, 100%, 65%);
+}
+
+.color-button--green {
+  --button-color: hsl(100, 100%, 49%);
+}
+
+.color-button--yellow {
+  --button-color: yellow;
+}
+
+.color-button--active {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.color-button--clicked {
+  opacity: 1;
+  transform: scale(0.9);
+}
+
+.info-display {
+  padding: 0.5rem;
+  border: 1px solid #eee;
+  background-color: rgba(255, 255, 255, 0.4);
+  box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.75);
+  text-align: center;
+}
+
+.score-display__number {
+  font-weight: 800;
+}
+
+
+
+
+
+
+
+
+
+
