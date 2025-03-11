@@ -32,7 +32,7 @@ function selectColor(color) {
   setTimeout(() => {
     colorButtonMap[color].classList.remove("color-button--clicked");
     checkClickedColor(color);
-  }, 1200);
+  }, 900);
 }
   
 function checkClickedColor(color) {
@@ -62,7 +62,7 @@ function showSequence(index) {
   
   setTimeout(() => {
     colorButtonMap[colorSequence[index]].classList.add("color-button--active");
-  }, 1000);
+  }, 900);
   
   setTimeout(() => {
     colorButtonMap[colorSequence[index]].classList.remove("color-button--active");
@@ -76,7 +76,7 @@ function showSequence(index) {
       infoDisplay.textContent = "Your Turn"
     }
     
-  }, 2500);
+  }, 2100);
 }
   
 function startGame() {

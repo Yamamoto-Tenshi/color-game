@@ -277,7 +277,7 @@ h4 {
   border-radius: 0.5rem;
   background-color: var(--button-color);
   opacity: 0.5;
-  transition:  0.25s ease-in-out;
+  transition:  0.2s ease-in-out;
 }
 
 @media screen and (max-width: 65rem) {

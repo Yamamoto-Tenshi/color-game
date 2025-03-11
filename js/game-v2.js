@@ -36,7 +36,7 @@ class ColorSequenceGame {
     setTimeout(() => {
       this.colorButtonMap[color].classList.remove("color-button--clicked");
       this.checkClickedColor(color);
-    }, 1200);
+    }, 900);
   }
 
   checkClickedColor(color) {
@@ -66,7 +66,7 @@ class ColorSequenceGame {
 
     setTimeout(() => {
       this.colorButtonMap[this.colorSequence[index]].classList.add("color-button--active");
-    }, 1000);
+    }, 900);
 
     setTimeout(() => {
       this.colorButtonMap[this.colorSequence[index]].classList.remove("color-button--active");
@@ -80,7 +80,7 @@ class ColorSequenceGame {
         this.infoDisplay.textContent = "Your Turn"
       }
 
-    }, 2500);
+    }, 2100);
   }
 
   startGame() {
